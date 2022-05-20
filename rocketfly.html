@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: rgb(20, 20, 24);
+        }
+     
+        img
+        {
+            height: 300px;
+            top: 100%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-100%);
+            z-index: 100;
+            
+        }
+        
+        @keyframes rocket1
+        {
+            0%
+            {
+                top: 100%;
+            }
+            5%
+            {
+                top: 60%;
+            }
+           
+            10%
+            {
+                top: 50%;
+            }
+            100%
+            {
+                top: 50%;
+            }
+        }
+
+        .line
+        {
+            height: 0px;
+            width: 23px;
+           background-image: linear-gradient(to bottom ,red,yellow);
+            top: 100%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-100%);
+        }
+        .rocket1
+        {
+            animation-name: rocket1;
+            animation-timing-function: linear;
+            animation-duration: 30s;
+            animation-direction: normal;  
+        }
+        .line1
+        {
+            animation-name: line;
+            animation-timing-function: linear;
+            animation-duration: 30s;
+        }
+        @keyframes line
+        {
+            0%
+            {
+                height: 10%;
+
+            }
+            5%
+            {
+                height: 60%;
+              
+            }
+            10%
+            {
+                height: 70%;
+              
+            }
+            100%
+            {
+                height: 70%;
+            }
+        }
+        
+        .circle1
+        {
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,-100%);
+            position: absolute;
+            z-index: 10000;
+            height: 5vw;
+            width: 5vw;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 50%;
+         
+        }
+        .circle2
+        {
+            top: 100%;
+            left: 47%;
+            transform: translate(-50%,-100%);
+            position: absolute;
+            z-index: 10000;
+            height: 5vw;
+            width: 5vw;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 50%;
+          
+        }
+        .circle3
+        {
+            top: 100%;
+            left: 53%;
+            transform: translate(-50%,-100%);
+            position: absolute;
+            z-index: 10000;
+            height: 5vw;
+            width: 5vw;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 50%;
+        
+            
+        }
+        .circle4
+        {
+            top: 97%;
+            left: 50%;
+            transform: translate(-50%,-100%);
+            position: absolute;
+            z-index: 10000;
+            height: 5vw;
+            width: 5vw;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 50%;
+           
+           
+            
+        }
+         
+        }
+      
+        .circ2 
+        {
+            animation-name: cir;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+        #btn
+        {
+            padding: 10px;
+            background-color: chartreuse;
+            border: none;
+            border-radius: 10px;
+            top: 5%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-5%);
+        }
+        #circ1
+        {
+            opacity: 1;
+        }
+        .circ 
+        {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="all">
+        <img id="img" src="./90789974_150542302932559_2788120755122995200_n.png" alt="" srcset="">
+        <button id="btn">Lunch</button>
+
+    </div>
+    <div class="line" id="line"></div>
+    <div class="circle1" id="circ1"></div>
+    <div class="circle2" id="circ1"></div>
+    <div class="circle3" id="circ1"></div>
+    <div class="circle4" id="circ1"></div>
+    <div class="circle5" id="circ1"></div>
+    <div class="circle6" id="circ1"></div>
+   <script>
+const img=document.getElementById('img');
+const btn=document.getElementById('btn');
+const line = document.getElementById('line');
+const circ =document.getElementById('circ1');
+
+btn.addEventListener("click",function()
+{
+    img.classList.toggle("rocket1");
+    line.classList.toggle("line1");
+    circ.classList.toggle('circ');
+    
+   
+}
+);
+   </script>
+</body>
+</html>
